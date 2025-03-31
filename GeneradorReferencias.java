@@ -37,8 +37,10 @@ public class GeneradorReferencias {
                         int dirX = offsetFiltroX + idx*4;
                         int dirY = offsetFiltroY +idx*4;
 
-                        referencias.add(crearReferencia("SOBEL_X[" + (ki+1) + "][" + (kj+1) + "]", dirX, tamPagina, 'R'));
-                        referencias.add(crearReferencia("SOBEL_Y[" + (ki+1) + "][" + (kj+1) + "]", dirY, tamPagina, 'R'));
+                        for (int c = 0; c < 3;c++){
+                            referencias.add(crearReferencia("SOBEL_X[" + (ki+1) + "][" + (kj+1) + "]", dirX, tamPagina, 'R'));
+                            referencias.add(crearReferencia("SOBEL_Y[" + (ki+1) + "][" + (kj+1) + "]", dirY, tamPagina, 'R'));
+                        }
 
                     }
                 }
