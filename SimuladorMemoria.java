@@ -123,14 +123,7 @@ public class SimuladorMemoria {
         System.out.println("Hits: " + hits);
         System.out.println("Fallas de página: " + misses);
         System.out.printf("Porcentaje de hits: %.2f %%\n", (100.0 * hits) / totalReferencias);
-        long tiempoHit = 50;
-        long tiempoMiss = 10000000;
-        long tiempoTotal = hits * tiempoHit + misses * tiempoMiss;
-        long todoHits = totalReferencias * tiempoHit;
-        long todoMisses = totalReferencias * tiempoMiss;
-        System.out.printf("Tiempo real simulado: %.2f ms\n", tiempoTotal / 1000000.0);
-        System.out.printf("Tiempo ideal (todo en RAM): %.2f ms\n", todoHits / 1000000.0);
-        System.out.printf("Tiempo pesimista (todo fallo): %.2f ms\n", todoMisses / 1000000.0);
+        
     }
 
     static class ActualizadorBits extends Thread{
